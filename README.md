@@ -1,3 +1,3 @@
 # Codeup Web Exercise
 
-Repository for classroom lecture notes and exercise solutions
+This is a repository of coding exercises for the Codeup front-end curriculum. 
