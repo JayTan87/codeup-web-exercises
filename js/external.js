@@ -6,8 +6,8 @@ console.log("Great, " + userInput + " is my favorite color too!");
 
 //Movie rental problem
 let userNumDays = prompt("How many days will you have books checked out?");
-const moviePrice = 3.00
-let result = userNumDays * moviePrice
+const moviePrice = 3.00;
+let result = userNumDays * moviePrice;
 console.log("The amount you will have to pay is $" + result + ".00.");
 
 //Contractor pay problem
@@ -38,9 +38,12 @@ console.log("Student is able to enroll: " + enrollStudent);
 //Product Offer problem
 let userNumberOfItems = prompt("How many items are you purchasing?")
 if (userNumberOfItems >= 2) {
-    atLeastTwo = true;
+    userNumberOfItems = true;
 }
 let offerNotExpired = true;
-let premMem = true
-let prodOff
-prodOff = (atLeastTwo && offerNotExpired) || premMem;
+let premMem = true;
+let prodOff = false;
+if ((userNumberOfItems && offerNotExpired) || (premMem && offerNotExpired)) {
+    prodOff = true;
+}
+console.log("Customer qualifies for discount: " + prodOff);
