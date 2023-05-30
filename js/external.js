@@ -4,11 +4,13 @@ alert("Welcome to my Website!");
 let userInput = prompt("What is your favorite color?");
 console.log("Great, " + userInput + " is my favorite color too!");
 
-let userDays = prompt("How many days will you have books checked out?");
-let moviePrice = 3.00
-let result = userDays * moviePrice
+//Movie rental problem
+let userNumDays = prompt("How many days will you have books checked out?");
+const moviePrice = 3.00
+let result = userNumDays * moviePrice
 console.log("The amount you will have to pay is $" + result + ".00.");
 
+//Contractor pay problem
 let userAmazon = prompt("How many hours did you work for Amazon?");
 let userGoogle = prompt("How many hours did you work for Google?");
 let userFacebook = prompt("How many hours did you work for FaceBook?");
@@ -24,10 +26,16 @@ totalFinal = totalAmazon + totalGoogle + totalFacebook
 
 console.log("The total amount of pay you will receive is $" + totalFinal + ".00.");
 
+//Student enrollment problem
 let isNotFull = true;
 let noConflict = true;
-let enrollStudent = isNotFull && noConflict;
+let enrollStudent = false;
+if (isNotFull && noConflict) {
+    enrollStudent = true;
+}
+console.log("Student is able to enroll: " + enrollStudent);
 
+//Product Offer problem
 let userNumberOfItems = prompt("How many items are you purchasing?")
 if (userNumberOfItems >= 2) {
     atLeastTwo = true;
