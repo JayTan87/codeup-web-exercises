@@ -6,7 +6,7 @@
 <body>
 	<script>
 
-3.
+//3.
 let userDays = prompt("How many days will you have books checked out?");
 let moviePrice = 3.00
 let result = userDays * moviePrice
@@ -36,16 +36,24 @@ let enrollStudent = isNotFull && noConflict;
 let atLeastTwo = true;
 let offerNotExpired = true;
 let premMem = true
-let prodOff = (atLeastTwo && offerNotExpired) || premMem;
+let prodOff
+	prodOff = (atLeastTwo && offerNotExpired) || premMem;
 
 var username = 'codeup';
 var password = 'notastrongpassword';
 passLength = password.length;
-let (passLength > 5) = true;
+let (passLength >= 5) == true;
+
+let passwordNoUserName
+	passwordNoUserName = !password.includes(username);
 
 
-userLength = username.length;
-let (userLength < 20) = true;
+let userLength = username.length;
+userLength = 10;
+let isTrue;
+if (userLength =< 20) {
+	isTrue = true;
+	}
 userTrim = username.trim();
 passTrim = password.trim();
 
