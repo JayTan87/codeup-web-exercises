@@ -83,7 +83,7 @@ function calculateTip(tipPercent, billTotal) {
 
 }
 let result = calculateTip(billTotal, tipPercent);
-console.log(result.toFixed(2));
+console.log("The dollar amount of your tip is $" + result.toFixed(2) + ".");
 
 /**
  * TODO:
@@ -109,7 +109,8 @@ console.log(result.toFixed(2));
 let totalPrice = prompt("What is the total amount of the bill?");
 let discountPercent = prompt("What is the amount of the discount?");
 function applyDiscount(totalPrice, discountPercent) {
-    return (totalPrice - (totalPrice * (discountPercent * .01)));
+    const percentConversion = .01;
+    return (totalPrice - (totalPrice * (discountPercent * percentConversion)));
 }
-let custTotal = applyDiscount(totalPrice, discountPercent);
-console.log(custTotal.toFixed(2));
+let customerTotal = applyDiscount(totalPrice, discountPercent);
+console.log("Your total bill with discount is $" + customerTotal.toFixed(2) + ".");
