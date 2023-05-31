@@ -22,8 +22,50 @@
  * console.logging the function's return value
  */
 let userSelectedColor = prompt ("What is your favorite color?");
+// function analyzeColor(userSelectedColor) {
+//     if (userSelectedColor === "red") {
+//         console.log("Strawberries are red");
+//     }
+//     else if (userSelectedColor === "blue") {
+//         console.log("The sky is blue");
+//     }
+//     else if (userSelectedColor === "yellow") {
+//         console.log("Sunflowers are yellow");
+//     }
+//     else if (userSelectedColor === "black") {
+//         console.log("Something about black");
+//     }
+//     else if (userSelectedColor === "green") {
+//         console.log("Grass is green");
+//     }
+//     else
+//         console.log("I don't know anything about this color");
+//
+// }
+// analyzeColor(userSelectedColor);
+
+
+// Don't change the next two lines!
+// These lines create two variables for you:
+// - `colors`: a list of the colors of the rainbow
+// - `randomColor`: contains a single random color value from the list (this
+//                  will contain a different color every time the page loads)
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+/**
+ * TODO:
+ * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
+ * You should see a different message every time you refresh the page
+ */
+console.log("The color you selected was " + userSelectedColor + ". Your random generated color is " + randomColor + ". ");
+analyzeColor(randomColor);
+/**
+ * TODO:
+ * Comment out the code above, and refactor your function to use a switch-case statement
+ */
+//let userSelectedColor = prompt ("What is your favorite color?");
 function analyzeColor(userSelectedColor) {
-    switch (analyzeColor(userSelectedColor)) {
+    switch (userSelectedColor) {
         case "red":
             console.log("Strawberries are red");
             break;
@@ -42,35 +84,24 @@ function analyzeColor(userSelectedColor) {
         default:
             console.log("I don't know anything about this color");
             break;
+
     }
+
 }
-
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
- * You should see a different message every time you refresh the page
- */
-
-/**
- * TODO:
- * Comment out the code above, and refactor your function to use a switch-case statement
- */
-
+analyzeColor(userSelectedColor);
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+// (function(color) {
+//     let userSelectedColor =  prompt("Please select a color.")
+    //let result = analyzeColor(userSelectedChoice)
+    //alert("Your color " + analyzeColor(userSelectedColor));
+//})
+analyzeColor(userSelectedColor);
+//alert();
 /* ########################################################################## */
 
 /**
@@ -92,7 +123,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+function calculateTotal(luckyNumber, totalBill){
+    switch(luckyNumber) {
+        case 0:
+            let amountDue = totalBill;
+        console.log("Sorry your lucky number " + luckyNumber + " does not qualify for a discount. Your total is " + totalBill + ".");
+            break;
+        case 1:
+            let discountAmount = .10;
+            amountDue = totalBill - (totalBill * discountAmount);
+            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 10% discount. Your total is " + amountDue + ".");
+            break;
+        case 2:
+            discountAmount = .25;
+            amountDue = totalBill - (totalBill * discountAmount);
+            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 25% discount. Your total is " + amountDue + ".");
+            break;
+        case 3:
+            discountAmount = .35;
+            amountDue = totalBill - (totalBill * discountAmount);
+            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 35% discount. Your total is $" + amountDue + ".");
+            break;
+        case 4:
+            discountAmount = .50;
+            amountDue = totalBill - (totalBill * discountAmount);
+            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 50% discount. Your total is $" + amountDue + ".");
+            break;
+        case 5:
+            discountAmount = 0;
+            amountDue = discountAmount;
+            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 100% discount. Your total is items are free!.");
+            break;
+    }
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
