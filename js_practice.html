@@ -1,63 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Inline JS</title>
+    <meta charset="UTF-8">
+    "use strict";
+    <title>JS Practice</title>
 </head>
 <body>
-	<script>
+<script>
 
-//3.
-let userDays = prompt("How many days will you have books checked out?");
-let moviePrice = 3.00
-let result = userDays * moviePrice
-console.log("The amount you will have to pay is $" + result + ".00.");
+   // 3.
+    let userDays = prompt("How many days will you have books checked out?");
+    let moviePrice = 3.00;
+    let result = userDays * moviePrice;
+    console.log("The amount you will have to pay is $" + result + ".00.");
 
-let userAmazon = prompt("How many hours did you work for Amazon?");
-let userGoogle = prompt("How many hours did you work for Google?");
-let userFacebook = prompt("How many hours did you work for FaceBook?");
-let hoursAmazon,  hoursGoogle, hoursFacebook, totalAmazon, totalGoogle, totalFacebook, totalFinal;
-hoursAmazon = 380.00
-hoursGoogle = 400.00
-hoursFacebook = 350.00
-totalAmazon = userAmazon * hoursAmazon
-totalGoogle = userGoogle * hoursGoogle
-totalFacebook = userFacebook * hoursFacebook
+    let userAmazon = prompt("How many hours did you work for Amazon?");
+    let userGoogle = prompt("How many hours did you work for Google?");
+    let userFacebook = prompt("How many hours did you work for FaceBook?");
+    let hoursAmazon,  hoursGoogle, hoursFacebook, totalAmazon, totalGoogle, totalFacebook, totalFinal;
+    hoursAmazon = 380.00
+    hoursGoogle = 400.00
+    hoursFacebook = 350.00
+    totalAmazon = userAmazon * hoursAmazon
+    totalGoogle = userGoogle * hoursGoogle
+    totalFacebook = userFacebook * hoursFacebook
 
-totalFinal = totalAmazon + totalGoogle + totalFacebook
-
-
-console.log("The total amount of pay you will receive is $" + totalFinal + ".00.");
+    totalFinal = totalAmazon + totalGoogle + totalFacebook
 
 
-let isNotFull = true;
-let noConflict = true;
-let enrollStudent = isNotFull && noConflict;
-
-let atLeastTwo = true;
-let offerNotExpired = true;
-let premMem = true
-let prodOff
-	prodOff = (atLeastTwo && offerNotExpired) || premMem;
-
-var username = 'codeup';
-var password = 'notastrongpassword';
-passLength = password.length;
-let (passLength >= 5) == true;
-
-let passwordNoUserName
-	passwordNoUserName = !password.includes(username);
+    console.log("The total amount of pay you will receive is $" + totalFinal + ".00.");
 
 
-let userLength = username.length;
-userLength = 10;
-let isTrue;
-if (userLength =< 20) {
-	isTrue = true;
-	}
-userTrim = username.trim();
-passTrim = password.trim();
+    let isNotFull = true;
+    let noConflict = true;
+    let enrollStudent = isNotFull && noConflict;
+
+    let atLeastTwo = true;
+    let offerNotExpired = true;
+    let premMem = true
+    let prodOff = (atLeastTwo && offerNotExpired) || premMem;
 
 
-	</script>
+
+</script>
 </body>
 </html>
