@@ -42,7 +42,7 @@ let userSelectedColor = prompt ("What is your favorite color?");
 //         console.log("I don't know anything about this color");
 //
 // }
-// analyzeColor(userSelectedColor);
+//analyzeColor(userSelectedColor);
 
 
 // Don't change the next two lines!
@@ -58,32 +58,27 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 console.log("The color you selected was " + userSelectedColor + ". Your random generated color is " + randomColor + ". ");
-analyzeColor(randomColor);
+console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 //let userSelectedColor = prompt ("What is your favorite color?");
 function analyzeColor(userSelectedColor) {
+    let message;
     switch (userSelectedColor) {
         case "red":
-            console.log("Strawberries are red");
-            break;
+            return message = ("Strawberries are red");
         case "blue":
-            console.log("The sky is blue");
-            break;
+            return message = ("The sky is blue");
         case "yellow":
-            console.log("Sunflowers are yellow");
-            break;
+            return message = ("Sunflowers are yellow");
         case "black":
-            console.log("Something about black");
-            break;
+            return message = ("Something about black");
         case "green":
-            console.log("Grass is green");
-            break;
+            return message = ("Grass is green");
         default:
-            console.log("I don't know anything about this color");
-            break;
+            return message = ("I don't know anything about this color");
 
     }
 
@@ -124,38 +119,41 @@ alert(analyzeColor(userSelectedColor));
  * return value.
  */
 function calculateTotal(luckyNumber, totalBill){
+    let amountDue
+    let discountAmount
     switch(luckyNumber) {
         case 0:
-            let amountDue = totalBill;
-        console.log("Sorry your lucky number " + luckyNumber + " does not qualify for a discount. Your total is " + totalBill + ".");
+            amountDue = totalBill;
+        alert(`Sorry your lucky number ${luckyNumber} does not qualify for a discount. Your total is $${totalBill}.`);
             break;
         case 1:
-            let discountAmount = .10;
+            discountAmount = .10;
             amountDue = totalBill - (totalBill * discountAmount);
-            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 10% discount. Your total is " + amountDue + ".");
+            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 10% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
             break;
         case 2:
             discountAmount = .25;
             amountDue = totalBill - (totalBill * discountAmount);
-            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 25% discount. Your total is " + amountDue + ".");
+            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 25% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
             break;
         case 3:
             discountAmount = .35;
             amountDue = totalBill - (totalBill * discountAmount);
-            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 35% discount. Your total is $" + amountDue + ".");
+            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 35% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
             break;
         case 4:
             discountAmount = .50;
             amountDue = totalBill - (totalBill * discountAmount);
-            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 50% discount. Your total is $" + amountDue + ".");
+            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 50% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
             break;
         case 5:
             discountAmount = 0;
             amountDue = discountAmount;
-            console.log("Congratulations, your lucky number of " + luckyNumber + " qualifes for a 100% discount. Your total is items are free!.");
+            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 100% discount. Your total before discounts is $${totalBill}. Your items are free!`);
             break;
     }
 }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -165,7 +163,10 @@ function calculateTotal(luckyNumber, totalBill){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+let totalBill = prompt("What is the total amount of your bill?");
+calculateTotal(luckyNumber, totalBill);
+
 
 /**
  * TODO:
@@ -185,3 +186,4 @@ function calculateTotal(luckyNumber, totalBill){
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+confirm(`Would you like to enter a number?`);
