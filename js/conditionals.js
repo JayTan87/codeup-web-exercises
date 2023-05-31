@@ -100,8 +100,8 @@ analyzeColor(userSelectedColor);
     //let result = analyzeColor(userSelectedChoice)
     //alert("Your color " + analyzeColor(userSelectedColor));
 //})
-analyzeColor(userSelectedColor);
-//alert();
+alert(analyzeColor(userSelectedColor));
+
 /* ########################################################################## */
 
 /**

@@ -9,7 +9,8 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return console.log("hello, " + name + ".");
+    console.log(`Hello, ${name}!`);
+
 }
 
 /**
@@ -19,7 +20,7 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello("Bob");
+let helloMessage = sayHello("Jeremy");
 
 /**
  * TODO:
@@ -63,7 +64,7 @@ function isTwo(number) {
     //     console.log(false);
     //     return isTwo = false;
 }
-console.log(isTwo(random));
+console.log(`The random number ${random} is equal to 2? ${isTwo(random)}`);
 
 /**
  * TODO:
@@ -78,12 +79,12 @@ console.log(isTwo(random));
  */
 let billTotal = prompt("How much is your bill total?");
 let tipPercent = prompt("How at what percentage are you tipping?");
-function calculateTip(tipPercent, billTotal) {
+const calculateTip = (tipPercent, billTotal) => {
     return (billTotal * (tipPercent * .01));
-
 }
+
 let result = calculateTip(billTotal, tipPercent);
-console.log("The dollar amount of your tip is $" + result.toFixed(2) + ".");
+alert(`The dollar amount of your tip is $${result.toFixed(2)}.`);
 
 /**
  * TODO:
@@ -108,9 +109,9 @@ console.log("The dollar amount of your tip is $" + result.toFixed(2) + ".");
  */
 let totalPrice = prompt("What is the total amount of the bill?");
 let discountPercent = prompt("What is the amount of the discount?");
-function applyDiscount(totalPrice, discountPercent) {
+const applyDiscount = (totalPrice, discountPercent) => {
     const percentConversion = .01;
     return (totalPrice - (totalPrice * (discountPercent * percentConversion)));
 }
 let customerTotal = applyDiscount(totalPrice, discountPercent);
-console.log("Your total bill with discount is $" + customerTotal.toFixed(2) + ".");
+alert(`Your total bill with discount is $${customerTotal.toFixed(2)}.`);
