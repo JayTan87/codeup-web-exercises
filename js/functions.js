@@ -8,6 +8,9 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+function sayHello(name) {
+    return console.log("hello, " + name + ".");
+}
 
 /**
  * TODO:
@@ -16,6 +19,7 @@
  *
  * console.log 'helloMessage' to check your work
  */
+let helloMessage = sayHello("Bob");
 
 /**
  * TODO:
@@ -23,6 +27,8 @@
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+let myName = "Jeremy";
+sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,6 +51,19 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+let number
+function isTwo(number) {
+        return (number === 2);
+
+    // //if (number === 2) {
+    //     console.log(true);
+    //     return isTwo = true;
+    // }
+    // else
+    //     console.log(false);
+    //     return isTwo = false;
+}
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -57,6 +76,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+let billTotal = prompt("How much is your bill total?");
+let tipPercent = prompt("How at what percentage are you tipping?");
+function calculateTip(tipPercent, billTotal) {
+    return (billTotal * (tipPercent * .01));
+
+}
+let result = calculateTip(billTotal, tipPercent);
+console.log(result.toFixed(2));
 
 /**
  * TODO:
@@ -79,3 +106,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+let totalPrice = prompt("What is the total amount of the bill?");
+let discountPercent = prompt("What is the amount of the discount?");
+function applyDiscount(totalPrice, discountPercent) {
+    return (totalPrice - (totalPrice * (discountPercent * .01)));
+}
+let custTotal = applyDiscount(totalPrice, discountPercent);
+console.log(custTotal.toFixed(2));

@@ -21,6 +21,30 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+let userSelectedColor = prompt ("What is your favorite color?");
+function analyzeColor(userSelectedColor) {
+    switch (analyzeColor(userSelectedColor)) {
+        case "red":
+            console.log("Strawberries are red");
+            break;
+        case "blue":
+            console.log("The sky is blue");
+            break;
+        case "yellow":
+            console.log("Sunflowers are yellow");
+            break;
+        case "black":
+            console.log("Something about black");
+            break;
+        case "green":
+            console.log("Grass is green");
+            break;
+        default:
+            console.log("I don't know anything about this color");
+            break;
+    }
+}
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
