@@ -33,3 +33,9 @@ for (let i = 1; i < 11; i++) {
     else
      console.log(`${wholeNumber} is odd.`);
 }
+for (let i = 1; i < 10; i++ ) {
+    for(let n = 1; n <= i; n++) {
+       console.log(i);
+    }
+
+}
