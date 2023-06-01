@@ -189,13 +189,17 @@ calculateTotal(luckyNumber, totalBill);
 let userConfirmInput = confirm(`Would you like to enter a number?`);
 if (userConfirmInput) {
     let userNumber = prompt("Please enter a number.");
-    if(isNaN(userNumber)) {
+    if (isNaN(userNumber)) {
         alert(`Input entered is incorrect. Please enter a number.`);
-    }
-    else {
+    } else {
         let userNumberEven = ((userNumber % 2) === 0);
         let userNumber100 = (parseInt(userNumber)) + 100;
         let userNumberPositive = userNumber >= 0;
         alert(`The number entered was ${userNumber}. The number entered with 100 added to it is ${userNumber100}. Is the number even? ${userNumberEven}. Is the number positive? ${userNumberPositive}.`);
+    }
 }
+else{
+    alert(`Have a good day!`);
+
 }
+
