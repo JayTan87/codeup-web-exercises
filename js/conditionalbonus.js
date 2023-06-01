@@ -31,31 +31,38 @@
 // }
 function favoriteDayWeek() {
     let userFavoriteDay = prompt("What is your favorite day of the week?");
-    switch(userFavoriteDay == ("Monday" || "Tuesday" || "Wednesday" || "Thursday" || "Friday" || "Saturday" || "Sunday")) {
-                case "Monday":
-                    alert("Monday message.");
-                    break;
-                case "Tuesday":
-                    alert("Tuesday message.");
-                    break;
-                case "Wednesday":
-                    alert("Wednesday message.");
-                    break;
-                case "Thursday":
-                    alert("Thursday message.");
-                    break;
-                case "Friday":
-                    alert("Friday message.");
-                    break;
-                case "Saturday":
-                    alert("Saturday message.");
-                    break;
-                case "Sunday":
-                    alert("Sunday message.");
-                    break;
-                default:
-                console.log("Input is invalid. Please try again.")
-                break;
+    switch (userFavoriteDay.toLowerCase()) {
+        case "mon":
+        case "monday":
+            alert("Monday message.");
+            break;
+        case "tue":
+        case "tuesday":
+            alert("Tuesday message.");
+            break;
+        case "wed":
+        case "wednesday":
+            alert("Wednesday message.");
+            break;
+        case "thurs":
+        case "thursday":
+            alert("Thursday message.");
+            break;
+        case "fri":
+        case "friday":
+            alert("Friday message.");
+            break;
+        case "sat":
+        case "saturday":
+            alert("Saturday message.");
+            break;
+        case "sun":
+        case "sunday":
+            alert("Sunday message.");
+            break;
+        default:
+            alert("Input is invalid. Please try again.")
+            break;
     }
 }
 favoriteDayWeek();

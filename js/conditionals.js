@@ -24,27 +24,27 @@
 let userSelectedColor = prompt ("What is your favorite color?");
 // function analyzeColor(userSelectedColor) {
 //     if (userSelectedColor === "red") {
-//         console.log("Strawberries are red");
+//         return "Strawberries are red";
 //     }
 //     else if (userSelectedColor === "blue") {
-//         console.log("The sky is blue");
+//         return "The sky is blue";
 //     }
 //     else if (userSelectedColor === "yellow") {
-//         console.log("Sunflowers are yellow");
+//         return "Sunflowers are yellow";
 //     }
 //     else if (userSelectedColor === "black") {
-//         console.log("Something about black");
+//         return "Something about black";
 //     }
 //     else if (userSelectedColor === "green") {
-//         console.log("Grass is green");
+//         return "Grass is green";
 //     }
 //     else
-//         console.log("I don't know anything about this color");
+//         return `I don't know anything about ${userSelectedColor}.`;
 //
 // }
 //analyzeColor(userSelectedColor);
-
-
+//
+//
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -90,12 +90,12 @@ analyzeColor(userSelectedColor);
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// (function(color) {
+// function(color) {
 //     let userSelectedColor =  prompt("Please select a color.")
     //let result = analyzeColor(userSelectedChoice)
     //alert("Your color " + analyzeColor(userSelectedColor));
 //})
-alert(analyzeColor(userSelectedColor));
+//alert(analyzeColor(userSelectedColor));
 
 /* ########################################################################## */
 
@@ -124,33 +124,29 @@ function calculateTotal(luckyNumber, totalBill){
     switch(luckyNumber) {
         case 0:
             amountDue = totalBill;
-        alert(`Sorry your lucky number ${luckyNumber} does not qualify for a discount. Your total is $${totalBill}.`);
-            break;
+        return(`Sorry your lucky number ${luckyNumber} does not qualify for a discount. Your total is $${totalBill}.`);
         case 1:
             discountAmount = .10;
             amountDue = totalBill - (totalBill * discountAmount);
-            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 10% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
-            break;
+            return(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 10% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
         case 2:
             discountAmount = .25;
             amountDue = totalBill - (totalBill * discountAmount);
-            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 25% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
-            break;
+            return(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 25% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
         case 3:
             discountAmount = .35;
             amountDue = totalBill - (totalBill * discountAmount);
-            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 35% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
-            break;
+            return(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 35% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
         case 4:
             discountAmount = .50;
             amountDue = totalBill - (totalBill * discountAmount);
-            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 50% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
-            break;
+            return(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 50% discount. Your total before discounts is $${totalBill}. Your total after discounts is $${amountDue.toFixed(2)}.`);
         case 5:
             discountAmount = 0;
             amountDue = discountAmount;
-            alert(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 100% discount. Your total before discounts is $${totalBill}. Your items are free!`);
-            break;
+            return(`Congratulations, your lucky number of ${luckyNumber} qualifes for a 100% discount. Your total before discounts is $${totalBill}. Your items are free!`);
+        default:
+            return(`Encountered an error`);
     }
 }
 
@@ -164,8 +160,9 @@ function calculateTotal(luckyNumber, totalBill){
  */
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
-let totalBill = prompt("What is the total amount of your bill?");
-calculateTotal(luckyNumber, totalBill);
+let totalBill = parseFloat(prompt("What is the total amount of your bill?"));
+alert(calculateTotal(luckyNumber, totalBill));
+
 
 
 /**
@@ -189,14 +186,15 @@ calculateTotal(luckyNumber, totalBill);
 let userConfirmInput = confirm(`Would you like to enter a number?`);
 if (userConfirmInput) {
     let userNumber = prompt("Please enter a number.");
-    if (isNaN(userNumber)) {
-        alert(`Input entered is incorrect. Please enter a number.`);
-    } else {
+    if (typeof userNumber === "number") {
         let userNumberEven = ((userNumber % 2) === 0);
         let userNumber100 = (parseInt(userNumber)) + 100;
         let userNumberPositive = userNumber >= 0;
         alert(`The number entered was ${userNumber}. The number entered with 100 added to it is ${userNumber100}. Is the number even? ${userNumberEven}. Is the number positive? ${userNumberPositive}.`);
+    } else {
+        alert(`Input entered is incorrect. Please enter a number.`);
     }
+
 }
 else{
     alert(`Have a good day!`);
