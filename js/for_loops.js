@@ -39,3 +39,7 @@ for (let i = 1; i < 10; i++ ) {
     }
 
 }
+for (let x = 0; x <= 20; x++) {
+    let updatedValue = (100 - (x * 5));
+    console.log(updatedValue);
+}
