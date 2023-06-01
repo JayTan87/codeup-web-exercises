@@ -186,4 +186,16 @@ calculateTotal(luckyNumber, totalBill);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-confirm(`Would you like to enter a number?`);
+let userConfirmInput = confirm(`Would you like to enter a number?`);
+if (userConfirmInput) {
+    let userNumber = prompt("Please enter a number.");
+    if(isNaN(userNumber)) {
+        alert(`Input entered is incorrect. Please enter a number.`);
+    }
+    else {
+        let userNumberEven = ((userNumber % 2) === 0);
+        let userNumber100 = (parseInt(userNumber)) + 100;
+        let userNumberPositive = userNumber >= 0;
+        alert(`The number entered was ${userNumber}. The number entered with 100 added to it is ${userNumber100}. Is the number even? ${userNumberEven}. Is the number positive? ${userNumberPositive}.`);
+}
+}
