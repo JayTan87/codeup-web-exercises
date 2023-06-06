@@ -1,45 +1,38 @@
-
+//multiplication table
 let userInput = prompt("Please enter a number to receive its multiplication table.");
-function showMultiplicationTable(userInput){
-   let number = parseInt(userInput);
-   //let one = number * 1;
-    console.log(number + " * 1 = " + (number * 1));
-    console.log(number + " * 2 = " + (number * 2));
-    console.log(number + " * 3 = " + (number * 3));
-    console.log(number + " * 4 = " + (number * 4));
-    console.log(number + " * 5 = " + (number * 5));
-    console.log(number + " * 6 = " + (number * 6));
-    console.log(number + " * 7 = " + (number * 7));
-    console.log(number + " * 8 = " + (number * 8));
-    console.log(number + " * 9 = " + (number * 9));
-    console.log(number + " * 10 = " + (number * 10));
-
+function showMultiplicationTable(userInput) {
+    for (let i = 1; i <= 10; i++) {
+        let number = parseInt(userInput);
+        console.log(`${number} * ${i} = ${number * i}`);
+    }
 }
 showMultiplicationTable(userInput);
 
-for (let i = 1; i < 11; i++) {
-    let minNumber = 20;
-    let maxNumber = 200;
+//Even and Odd
+for (let i = 0; i < 10; i++) {
     function getRando(minNumber, maxNumber) {
-        return Math.random() * (maxNumber - minNumber) + minNumber;
-        //return random;
+        return Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
     }
-    let random = getRando(minNumber, maxNumber);
-    let wholeNumber = random.toFixed(0);
-    let isEven = wholeNumber % 2 === 0;
-    if (isEven) {
-     console.log(`${wholeNumber} is even.`);
+    let random = getRando(20, 200);
+    if (random % 2 === 0) {
+     console.log(`${random} is even.`);
     }
     else
-     console.log(`${wholeNumber} is odd.`);
+     console.log(`${random} is odd.`);
 }
-for (let i = 1; i < 10; i++ ) {
-    for(let n = 1; n <= i; n++) {
-       console.log(i);
-    }
+//Number pattern
+// for (let i = 1; i < 10; i++ ) {
+//     for(let n = 1; n <= i; n++) {
+//        console.log(i);
+//     }
+// }
 
+//Number pattern
+for(let i=1; i < 10; i++) {
+    console.log(`${i.toString().repeat(i)}`);
 }
+
+//100 countdown
 for (let x = 0; x <= 20; x++) {
-    let updatedValue = (100 - (x * 5));
-    console.log(updatedValue);
+    console.log(100 - (x*5));
 }
