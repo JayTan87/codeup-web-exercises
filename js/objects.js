@@ -11,11 +11,11 @@
 	 *  > console.log(person.firstName) // "Rick"
 	 *  > console.log(person.lastName) // "Sanchez"
 	 */
-let person = {};
-person.firstName = "Jeremy";
-person.lastName = "Tanner";
-console.log(person.firstName);
-console.log(person.lastName);
+// const person = {};
+// person.firstName = "Jeremy";
+// person.lastName = "Tanner";
+// console.log(person.firstName);
+// console.log(person.lastName);
 	/**
 	 * TODO:
 	 * Add a sayHello method to the person object that returns a greeting using
@@ -25,10 +25,10 @@ console.log(person.lastName);
 	 * Example
 	 * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
 	 */
-person.sayHello = () => {
-	console.log(`Hello from ${person.firstName} ${person.lastName}!`);
-}
-person.sayHello();
+// person.sayHello = () => {
+// 	return (`Hello from ${this.firstName} ${this.lastName}!`);
+// }
+// person.sayHello();
 	/** TODO:
 	 * HEB has an offer for the shoppers that buy products amounting to
 	 * more than $200. If a shopper spends more than $200, they get a 12%
@@ -49,9 +49,9 @@ person.sayHello();
 		{name: 'George', amount: 320}
 	];
 	let discountCalculator = (name, amount) => {
-		if(amount >= 200) {
+		if(amount > 200) {
 			let shoppersTotal = (amount -(amount * discountPercent));
-			return (`${name} your order total is ${amount} qualifies for a 12% discount your new total is ${shoppersTotal}!`);
+			return (`${name} your order total is ${amount} qualifies for a ${discountPercent * 100}% discount your new total is ${shoppersTotal}!`);
 		}
 		else {
 			return (`Sorry, ${name} your amount of ${amount} does not qualify for a discount. Your total is ${amount}`);
@@ -59,7 +59,6 @@ person.sayHello();
 	}
 
 shoppers.forEach(function (shopper) {
-	// console.log(shopper);
 	console.log(discountCalculator(shopper.name, shopper.amount));
 	}
 );
@@ -75,42 +74,53 @@ shoppers.forEach(function (shopper) {
 	 * > console.log(books[0].author.firstName) // "Douglas"
 	 * > console.log(books[0].author.lastName) // "Adams"
 	 */
-// let bookA = {}, bookB = {}, bookC = {}, bookD = {}, bookE = {};
-// let author = {};
-// bookA.author = {};
-// bookA.author.firstName = "Douglas";
-// bookA.author.lastName = "Adams";
-// bookA.title = "The Salmon of Doubt";
-//
-// bookB.author = {};
-// bookB.author.firstName = "Charles";
-// bookB.author.lastName = "Darwin";
-// bookB.title = "Theory of Evolution";
-//
-// bookC.author = {};
-// bookC.author.firstName = "Bill";
-// bookC.author.lastName = "Smith";
-// bookC.title = "The Book";
-//
-// bookD.author = {};
-// bookD.author.firstName = "Steve";
-// bookD.author.lastName = "Erwin";
-// bookD.title = "Animals and Stuff";
-//
-// bookE.author = {};
-// bookE.author.firstName = "Roger";
-// bookE.author.lastName = "Wilson";
-// bookE.title = "Return of the Book";
-//
-//
+	let books = [
+		{
+			title: "The Salmon of Doubt",
+			author: {
+				firstName: "Douglas",
+				lastName: "Adams"
+			}
+		},
+		{
+			title: "The Theory of Evolution",
+			author: {
+				firstName: "Charles",
+				lastName: "Darwin"
+			}
+		},
+		{
+			title: "The Book",
+			author: {
+				firstName: "Bill",
+				lastName: "Smith",
+			}
+		},
+		{
+			title: "Animals and Stuff",
+			author: {
+				firstName: "Steve",
+				lastName: "Erwin"
+		}
+		},
+		{
+			title: "Return of the Book",
+			author: {
+				firstName: "Roger",
+				lastName: "Wilson"
+			}
+		}
+		];
+	books.forEach((book,index) => {
+		console.log(`Book #${index + 1}`);
+		console.log(`Title: ${book.title}`);
+		console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
+		if(index < books.length -1) {
+			console.log(`---`);
+		}
+	})
 // let books = [bookA, bookB, bookC, bookD, bookE];
-//
-// 	console.log(books[0].title);
-// 	console.log(books[0].author.firstName);
-// 	console.log(books[0].author.lastName);
-// 	console.log(books[1].title);
-// 	console.log(books[1].author.firstName);
-// 	console.log(books[1].author.lastName);
+
 
 	/**
 	 * TODO:
@@ -136,60 +146,79 @@ shoppers.forEach(function (shopper) {
 	 *      ---
 	 *      ...
 	 */
-// books.forEach(function(books, index) {
-// 	console.log(`Book #${index} \n ${books.title} \n ${books.author.firstName} ${books.author.lastName}`);
-// 	console.log()
-// 	});
-	/**
-	 * Bonus:
-	 * - Create a function named `createBook` that accepts a title and author
-	 *   name and returns a book object with the properties described
-	 *   previously. Refactor your code that creates the books array to instead
-	 *   use your function.
-	 * - Create a function named `showBookInfo` that accepts a book object and
-	 *   outputs the information described above. Refactor your loop to use your
-	 *   `showBookInfo` function.
-	 */
-let books = [];
-let i= 0;
-do {
-	let userTitle = prompt("Please enter the title for the book.");
-	let userInputAuthor = prompt("Please enter the first and last name of the author.");
-	let createBook = (userTitle, userInputAuthor) => {
-		let userString = userInputAuthor.toString();
-		// console.log(userString);
-		let userAuthor = userString.split(" ");
+function createBook(title, authorFirstName, authorLastName) {
 		return {
-			// index: i,
-			title: userTitle,
+			title: title,
 			author: {
-				firstName: userAuthor[0],
-				lastName: userAuthor[userAuthor.length - 1]
+				firstName: authorFirstName,
+				lastName: authorLastName
 			}
-		};
-	}
-	i++;
+		}
+		let books = [createBook("The Salmon of Doubt", "Douglas", "Adams"),
+			createBook("The Theory of Evolution", "Charles", "Darwin"),
+			createBook("The Book", "Bill", "Smith"),
+			createBook("Animals and Stuff", "Steve", "Erwin"),
+			createBook("Return of the Book", "Roger", "Wilson"),
+		];
 
-	let userResponse = confirm("Would you like to enter another book?")
-	if(userResponse === true) {
-		books = [createBook()]
-		console.log(books);
-	}
-	else
-		break;
-	// books.forEach(function(book) {
-	// 	console.log(createBook(book.title, book.author.firstName));
+		books.push(createBook())
 
-	// })
-} while(true);
+		function showBooksInfo(book) {
+			console.log(`Title: ${title}`);
+			console.log(`Author: ${books.author.firstName} ${books.author.lastName}`);
+		}
+
+		showBooksInfo(books);
+		// * Bonus:
+		// * - Create a function named `createBook` that accepts a title and author
+		// *   name and returns a book object with the properties described
+		// *   previously. Refactor your code that creates the books array to instead
+		// *   use your function.
+		// * - Create a function named `showBookInfo` that accepts a book object and
+		// *   outputs the information described above. Refactor your loop to use your
+		// *   `showBookInfo` function.
+		// */
+// let books = [];
+// let i= 0;
+// do {
+// 	let userTitle = prompt("Please enter the title for the book.");
+// 	let userInputAuthor = prompt("Please enter the first and last name of the author.");
+// 	let createBook = (userTitle, userInputAuthor) => {
+// 		let userString = userInputAuthor.toString();
+// 		// console.log(userString);
+// 		let userAuthor = userString.split(" ");
+// 		return {
+// 			// index: i,
+// 			title: userTitle,
+// 			author: {
+// 				firstName: userAuthor[0],
+// 				lastName: userAuthor[userAuthor.length - 1]
+// 			}
+// 		};
+// 	}
+// 	i++;
+//
+// 	let userResponse = confirm("Would you like to enter another book?")
+// 	if(userResponse === true) {
+// 		books = [createBook()]
+// 		console.log(books);
+// 	}
+// 	else
+// 		break;
+// 	// books.forEach(function(book) {
+// 	// 	console.log(createBook(book.title, book.author.firstName));
+//
+// 	// })
+// } while(true);
 
 		// let userConfirm =confirm("Would you like to add another book?");
 		// if (confirm === false) {
 		// 	// break;
 		// }
-	//
-	// let userContinue = prompt("Would you like to add another book?");
+		//
+		// let userContinue = prompt("Would you like to add another book?");
 
 
-	// console.log(newBook.author.firstName, newBook.author.lastName)
-})();
+		// console.log(newBook.author.firstName, newBook.author.lastName)
+	}
+});

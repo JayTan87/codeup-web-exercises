@@ -33,7 +33,7 @@ sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -110,8 +110,7 @@ alert(`The dollar amount of your tip is $${result.toFixed(2)}.`);
 let totalPrice = prompt("What is the total amount of the bill?");
 let discountPercent = prompt("What is the amount of the discount?");
 const applyDiscount = (totalPrice, discountPercent) => {
-    const percentConversion = .01;
-    return (totalPrice - (totalPrice * (discountPercent * percentConversion)));
+    return (totalPrice - (totalPrice * (discountPercent * .01)));
 }
 let customerTotal = applyDiscount(totalPrice, discountPercent);
 alert(`Your total bill with discount is $${customerTotal.toFixed(2)}.`);
