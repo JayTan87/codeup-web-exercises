@@ -6,14 +6,17 @@ color : red;
 color: white;
      background-color: black;
      text-shadow: black 1px 0 10px;
+     margin: unset;
  }
 fieldset {
     background-color: gray;
     border-color:red;
+    border-radius: 15px;
 }
 input {
     color: white;
     background-color: black;
+    margin: 5px;
 
 }
 textarea {
