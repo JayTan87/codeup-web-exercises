@@ -1,0 +1,31 @@
+ p {
+color : red;
+     text-shadow: black 1px 0 10px;
+}
+ body {
+color: white;
+     background-color: black;
+     text-shadow: black 1px 0 10px;
+ }
+fieldset {
+    background-color: gray;
+    border-color:red;
+}
+input {
+    color: white;
+    background-color: black;
+
+}
+textarea {
+    color: white;
+    background-color: black;
+}
+button {
+    background-color: red;
+    color: white;
+    text-shadow: black 1px 0 10px;
+}
+legend {
+    color : white;
+    text-shadow: black 1px 0 10px;
+}

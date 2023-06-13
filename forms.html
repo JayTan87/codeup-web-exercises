@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
-<h1>Register With Us</h1>
-<form method="POST" action="https://request-inspector.glitch.me/">
-    <p>
-    <input type="email" name="email" placeholder="Enter your email address.">
-    <br>
-    <input type="password" name="password" placeholder="Enter your password.">
-    <br>
-    <textarea name="bio" placeholder="Enter your bio"></textarea>
-    </p>
-    <br>
-    <p>How did you hear about us?</p>
-    Billboard<input type="radio" name="Hear about us" value="Billboard">
-    <br>
-    Radio Advertisement<input type="radio" name="Hear about us" value="Radio">
-    <br>
-    Internet Advertisement<input type="radio" name="Hear about us" value="Internet">
-    <br>
-    Other<input type="radio" name="Hear about us" value="Other">
-    <br>
-    <p>What web browser are you using?</p>
-    <select name="Web Browser">
-        <option value ="IE">Internet Explorer</option>
-        <option value ="GC">Google Chrome</option>
-        <option value ="FF">Firefox</option>
-    </select>
-    <br>
-    <button type="submit">Submit</button>
-</form>
+<header>
+    <h1>Register With Us</h1>
+</header>
+<fieldset>
+    <legend>Website Sign Up</legend>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <div>
+
+            <input type="email" name="email" placeholder="Enter your email address.">
+        </div>
+        <br>
+        <div>
+            <input type="password" name="password" placeholder="Enter your password.">
+        </div>
+        <br>
+        <div>
+            <textarea name="bio" placeholder="Enter your bio"></textarea>
+        </div>
+        <br>
+        <p>How did you hear about us?</p>
+        Billboard<input type="radio" name="Hear about us" value="Billboard">
+        <br>
+        Radio Advertisement<input type="radio" name="Hear about us" value="Radio">
+        <br>
+        Internet Advertisement<input type="radio" name="Hear about us" value="Internet">
+        <br>
+        Other<input type="radio" name="Hear about us" value="Other">
+        <br>
+        <p>What web browser are you using?</p>
+        <select name="Web Browser">
+            <option value="IE">Internet Explorer</option>
+            <option value="GC">Google Chrome</option>
+            <option value="FF">Firefox</option>
+        </select>
+        <br>
+        <br>
+        <div>
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+</fieldset>
 </body>
 </html>

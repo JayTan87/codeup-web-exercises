@@ -1,0 +1,9 @@
+
+header {
+    background-color: lightgray;
+    padding: 10px;
+
+}
+li {
+    display: inline-block;
+}
