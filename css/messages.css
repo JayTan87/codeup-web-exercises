@@ -14,6 +14,7 @@ div.message1{
     color: darkblue;
     font-size: 12px;
     margin: 5px 0;
+    border: 1px solid lightgrey;
 
 }
 p {
@@ -25,6 +26,7 @@ div.message2{
     color: darkgreen;
     font-size: 12px;
     margin: 5px 0;
+    border: 1px solid lightgrey;
 }
 div.message3{
     background-color: lightgoldenrodyellow;
@@ -32,6 +34,7 @@ div.message3{
     color: goldenrod;
     font-size: 12px;
     margin: 5px 0;
+    border: 1px solid lightgrey;
 }
 div.message4{
     background-color: indianred;
@@ -39,4 +42,5 @@ div.message4{
     color: darkred;
     font-size: 12px;
     margin: 5px 0;
+    border: 1px solid lightgrey;
 }
