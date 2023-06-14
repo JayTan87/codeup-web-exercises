@@ -1,4 +1,32 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: red; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+h2 {
+    color: lightgray;
+    text-decoration: underline;
+}
+body {
+    font-family: "Roboto", sans serif;
+    background-color: black;
+    background-size: cover;
+    background-image: url("../img/bread.jpg");
+    color: white;
+
+}
+ul li {
+    list-style-type: square;
+}
+
+table,tr,th,td {
+    border:1px solid black;
+    padding: 10px;
+    font-size: 12px;
+}
+a {
+    color: whitesmoke;
+}
+a:visited{
+    color:darkgray;
 }
