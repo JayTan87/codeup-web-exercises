@@ -9,38 +9,38 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 div.message1{
-    background-color: cornflowerblue;
+    background-color: #cddeff;
     border-radius: 5px;
-    color: darkblue;
+    color: #6564b3;
     font-size: 12px;
-    margin: 5px 0;
+    margin: .5rem 0;
     border: 1px solid lightgrey;
 
 }
 p {
-    padding: 5px;
+    padding: .5rem;
 }
 div.message2{
-    background-color: palegreen;
+    background-color: #cff3da;
     border-radius: 5px;
-    color: darkgreen;
+    color: #459061;
     font-size: 12px;
-    margin: 5px 0;
+    margin: .5rem 0;
     border: 1px solid lightgrey;
 }
 div.message3{
-    background-color: lightgoldenrodyellow;
+    background-color: #fcfbc9;
     border-radius: 5px;
-    color: goldenrod;
+    color: #a59445;
     font-size: 12px;
-    margin: 5px 0;
+    margin: .5rem 0;
     border: 1px solid lightgrey;
 }
 div.message4{
-    background-color: indianred;
+    background-color: #fad3d7;
     border-radius: 5px;
-    color: darkred;
+    color: #a0475a;
     font-size: 12px;
-    margin: 5px 0;
+    margin: .5rem 0;
     border: 1px solid lightgrey;
 }
