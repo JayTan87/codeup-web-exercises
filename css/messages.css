@@ -1,0 +1,42 @@
+*{
+    margin: unset;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+div.message1{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    color: darkblue;
+    font-size: 12px;
+    margin: 5px 0;
+
+}
+p {
+    padding: 5px;
+}
+div.message2{
+    background-color: palegreen;
+    border-radius: 5px;
+    color: darkgreen;
+    font-size: 12px;
+    margin: 5px 0;
+}
+div.message3{
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+    color: goldenrod;
+    font-size: 12px;
+    margin: 5px 0;
+}
+div.message4{
+    background-color: indianred;
+    border-radius: 5px;
+    color: darkred;
+    font-size: 12px;
+    margin: 5px 0;
+}
