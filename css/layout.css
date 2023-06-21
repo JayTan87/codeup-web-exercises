@@ -62,6 +62,9 @@
 .row.justify-end {
     justify-content: end;
 }
+.row.justify-center{
+    justify-content: center;
+}
 .row.justify-space-between {
     justify-content: space-between;
 }
