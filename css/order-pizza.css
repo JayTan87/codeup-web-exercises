@@ -1,0 +1,16 @@
+.container-fluid.jt-hero {
+    min-height: 30vh;
+    background-image: url("../img/pizza2.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.container.jt-header {
+    margin: unset;
+    justify-content: flex-start;
+}
+div.jt-button {
+    margin-left: 10px;
+}
+a.jt-a {
+    padding-left: unset;
+}
