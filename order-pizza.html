@@ -31,7 +31,7 @@
         </div>
     </div>
 </header>
-</div>
+
 <div class="container-fluid jt-hero d-flex align-items-center p-0">
     <h1 class="w-100 text-center bg-opacity-75 bg-light p-2">Welcome to Pizza World!</h1>
 </div>
@@ -41,45 +41,104 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Size and Crust
+                            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><span
+                            class="badge bg-secondary rounded-pill">1</span> Size and Crust
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                            type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cheese and
+                            type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><span
+                            class="badge bg-secondary rounded-pill">2</span> Cheese and
                         Sauce
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Toppings
+                            type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><span
+                            class="badge bg-secondary rounded-pill">3</span> Toppings
                     </button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active p-0" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                      tabindex="0">
-                    <div class="container">
+                    <div class="container border border-dark rounded w-100 p-0">
                         <div class="row">
-                            <div class="col p-0">
+                            <div class="col">
                                 <p class="bg-primary w-100 text-light p-2 rounded">Choose Size and Crust</p>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col p-0">
-                                            <p class="p-2 rounded">Hand Tossed</p>
+                                <div class="card jt-card">
+                                    <div class="card-header">
+                                        Hand Tossed
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
+                                        </li>
+                                        <li class="list-group-item"><input type="radio" id="pizzaSmallGarlic" name="pizzaSize"> <label for="pizzaSmallGarlic"> Small (10")</label></li>
+                                        <li class="list-group-item"><input type="radio" id="pizzaMediumGarlic" name="pizzaSize"> <label for="pizzaMediumGarlic"> Medium (12")</label></li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="card jt-card">
+                                    <div class="card-header">
+                                        Crispy Thin
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.
+                                        </li>
+                                        <li class="list-group-item"><input type="radio" id="pizzaMediumCrispy" name="pizzaSize"> <label for="pizzaMediumCrispy"> Medium (12")</label></li>
+                                        <li class="list-group-item"> <input type="radio" id="pizzaLargeCrispy" name="pizzaSize"> Large (14")</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                 aria-labelledby="profile-tab"
+                                 tabindex="0"> Cheese and Sauce
+                                </div>
+                            <div class="container border border-dark rounded w-100 p-0">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="bg-primary w-100 text-light p-2 rounded">Choose Size and Crust</p>
+                                        <div class="card jt-card">
+                                            <div class="card-header">
+                                                Hand Tossed
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.
+                                                </li>
+                                                <li class="list-group-item"><input type="radio" id="beefSelected" name="beefSelected"> <label for="pizzaSmallGarlic"> Small (10")</label></li>
+                                                <li class="list-group-item"><input type="radio" id="hamSelected" name="hamSelected"> <label for="pizzaMediumGarlic"> Medium (12")</label></li>
+                                            </ul>
                                         </div>
                                     </div>
+                                </div>
 
-                                </div>
-                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
-                                     aria-labelledby="profile-tab"
-                                     tabindex="0">I am the profile tab
-                                </div>
-                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
-                                     aria-labelledby="contact-tab"
-                                     tabindex="0">...
-                                </div>
+
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                 aria-labelledby="contact-tab"
+                                 tabindex="0">
+                                Stuff
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-end p-2 border border-dark bg-secondary bg-opacity-10 text-end">
+<!--                            <button class="btn btn-primary" type="button">-->
+<!--                                Next Step >-->
+<!--                                <svg class="bi ms-1" width="20" height="20">-->
+<!--                                    <use xlink:href="#arrow-right-short"></use>-->
+<!--                                </svg>-->
+<!--                            </button>-->
+<!--                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">-->
+<!--                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                                <span class="visually-hidden">Previous</span>-->
+<!--                            </button>-->
+                            <button class="btn btn-primary" type="button" data-bs-target="#profile-tab" data-bs-slide="#profile-tab-pane">
+                                <span class="">Next ></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </form>
     </div>
 </div>

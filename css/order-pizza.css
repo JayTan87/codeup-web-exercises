@@ -14,3 +14,10 @@ div.jt-button {
 a.jt-a {
     padding-left: unset;
 }
+div.jt-card {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+button {
+    text-align: center;
+}
