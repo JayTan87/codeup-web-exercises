@@ -298,25 +298,24 @@ returnAdmins(users) returns...
 //
 // returnLargestStudentCount(classes); // returns 30
 "use strict";
-
-// https://developer.mozilla.org/en-US/docs/Web/Events
-
-// ==========================  Simple Example
-
-// When a user clicks the test button, log "test" in the console. (with pre-built function or anon function)
-const testBtn = document.getElementById('test-btn');
-// testBtn.addEventListener('mouseover', () =>  {
-// 	console.log('test');
-// });
-
-		function logTest() {
-			console.log('test');
-		}
- testBtn.addEventListener('click', logTest)
+//
+// // https://developer.mozilla.org/en-US/docs/Web/Events
+//
+// // ==========================  Simple Example
+//
+// // When a user clicks the test button, log "test" in the console. (with pre-built function or anon function)
+// const testBtn = document.getElementById('test-btn');
+// // testBtn.addEventListener('mouseover', () =>  {
+// // 	console.log('test');
+// // });
+//
+// 		function logTest() {
+// 			console.log('test');
+// 		}
+//  testBtn.addEventListener('click', logTest)
 // remove event listener
 
 // testBtn.removeEventListener("click", logTest);
-
 
 
 // ==========================  Register Additional Events
@@ -326,22 +325,22 @@ const testBtn = document.getElementById('test-btn');
     1.  target the node
     2.  add event listener for mouseover event to target
     3.  in listener change styling for paragraph
-
- */
-let changeStyle =() => {
-	h1.style.color = "red";
-	h1.style.fontFamily = "fantasy";
-	h1.style.fontSize = "10em";
-}
-
-const h1 =document.getElementsByTagName('h1')[0];
-h1.addEventListener('mouseover', changeStyle);
-// When double-clicking the restore text button, make the h1 font size 2em
-const textBtn=document.getElementById('shrink-btn');
-
-textBtn.addEventListener('dblclick', () => {
-	h1.style.fontSize='2em';
-})
+//
+//  */
+// let changeStyle =() => {
+// 	h1.style.color = "red";
+// 	h1.style.fontFamily = "fantasy";
+// 	h1.style.fontSize = "10em";
+// }
+//
+// const h1 =document.getElementsByTagName('h1')[0];
+// h1.addEventListener('mouseover', changeStyle);
+// // When double-clicking the restore text button, make the h1 font size 2em
+// const textBtn=document.getElementById('shrink-btn');
+//
+// textBtn.addEventListener('dblclick', () => {
+// 	h1.style.fontSize='2em';
+// })
 
 // ==========================  Event Object
 
@@ -380,3 +379,33 @@ textBtn.addEventListener('dblclick', () => {
 // ==========================  e.target
 
 // *** see additional example
+
+let fizzBuzz = () => {
+	for(let i = 0; i < 101; i++) {
+		if((i % 3 === 0)) {
+			if((i % 3 === 0) && (i % 5 ===0)) {
+				console.log("fizzbuzz");
+			}
+			else
+			console.log("fizz");
+		}
+		else if ((i % 5 === 0)) {
+			console.log("buzz")
+		}
+		else
+		console.log(i);
+	}
+}
+fizzBuzz();
+// let fizzBuzz = () => {
+// 	for (let i = 0; i < 101; i++) {
+// 		return (i % 3 === 0)
+// 			? console.log("fizz")
+// 			: (i % 5 === 0)
+// 				? console.log("buzz")
+// 				: ((i % 3) && (i % 5))
+// 				? console.log("fizzbuzz")
+// 					: console.log(i);
+// 	}
+// }
+// fizzBuzz();
