@@ -1,0 +1,23 @@
+.highlight {
+    background-color: yellow;
+}
+.invisible {
+    visibility: hidden;
+}
+.blue {
+    color: blue;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    border: 5px solid saddlebrown;
+}
+.red {
+    background-color: red;
+}
+.orange {
+    background-color: orange;
+}
+.yellow {
+    background-color: yellow;
+}
