@@ -2,36 +2,53 @@
 <html>
 <head>
     <title>Online Store</title>
-    <script src="js/ajax_store.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ajax-store.css">
 </head>
-<body>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-secondary shadow">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <h1 class="fs-4 justify-content-lg-start text-light text-shadow">Hardware Store</h1>
+    </a>
 
-<h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+</header>
+<body class="bg-secondary-subtle cursor">
+
+<h2 class="border-bottom">My Tool Store</h2>
+
+<table id="products" class="form-control bg-secondary-subtle">
+    <thead class="form-control bg-secondary-subtle">
+    <tr class="d-flex justify-content-around">
+        <th>Title </th>
+        <th>Quantity </th>
+        <th>Price </th>
+        <th>Categories </th>
+    </tr>
     </thead>
-    <tbody id="insertProducts"></tbody>
+    <tbody id="insertProducts" class="form-control"></tbody>
 </table>
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
+<div class="d-flex justify-content-center">
+<button onClick="history.go(0);" class="bg-primary text-light rounded border-unset p-2">Refresh Page</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="js/ajax-store.js"></script>
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
 <script>
-(function() {
-    "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
+	(function () {
+		"use strict";
+		// TODO: Create an AJAX GET request for the file under data/inventory.json
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
+		// TODO: Take the data from inventory.json and append it to the products table
+		//       HINT: Your data should come back as a JSON object; use console.log() to inspect
+		//             its contents and fields
+		//       HINT: You will want to target #insertProducts for your new HTML elements
+	})();
 </script>
 
 </body>

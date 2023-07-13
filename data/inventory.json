@@ -30,5 +30,29 @@
             "tool"
         ],
         "price": 10
+    },
+    {
+        "title": "Impact",
+        "quantity": 37,
+        "categories": [
+            "tool"
+        ],
+        "price": 100
+    },
+    {
+        "title": "Wrench",
+        "quantity": 100,
+        "categories": [
+            "tool"
+        ],
+        "price": 15
+    },
+    {
+        "title": "Ratchet",
+        "quantity": 100,
+        "categories": [
+            "tool"
+        ],
+        "price": 35
     }
 ]
