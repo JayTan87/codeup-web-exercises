@@ -53,6 +53,7 @@ $(() => {
 		const coords = map.getCenter();
 		reverseGeocode(coords, MAPBOX_TOKEN).then((data) => {
 			console.log(data);
+			console.log(coords)
 			document.querySelector('h1').innerHTML = `${data}`;
 		});
 	}

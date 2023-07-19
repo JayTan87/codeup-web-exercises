@@ -8,7 +8,6 @@ $(() => {
 
 	function renderList(items) {
 		for (let i = 0; i < items.length; i++) {
-			console.log("inside for loop")
 			let newRow = document.createElement('tr')
 			newRow.classList.add("d-flex", "justify-content-between");
 			newRow.innerHTML = `

@@ -9,13 +9,13 @@ $(() => {
 	function renderList(items) {
 		for (let i = 0; i < items.length; i++) {
 			console.log("inside for loop")
-			let newRow = document.createElement('tr')
-			newRow.classList.add("d-flex", "justify-content-between");
+			let newRow = document.createElement('div')
+			newRow.classList.add("col");
 			newRow.innerHTML = `
-			<div class="col text-center">${items[i].title}</div>
-			<div class="col text-center">${items[i].content}</div>
-			<div class="col text-center">${items[i].price}</div>
-			<div class="col text-center">${items[i].categories.join(', ')}</>
+			<h1 class="justify-content-start">${items[i].title}</h1>
+			<h2 class="justify-content-start">${items[i].date}</div>
+			<p class="fs-6 justify-content-start">${items[i].content}</p>
+			<p class="justify-content-start">${items[i].categories}</p>
 			`;
 			posts.appendChild(newRow);
 		}
